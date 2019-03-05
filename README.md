@@ -1,7 +1,7 @@
 # FateHistory-SpringRESTApi
 Java backend for the FateHistory mobile app using Spring and OAuth
 
-# A Shopping Cart
+# Fate / History
 
 This product builds the backend for the Fate/History mobile app. This project full implements the REST API Web services to retrieve Fate characters along with their associated historical figures and support the favoriting/history track process for users of the app. The REST API will be fully documented using Swagger and the front end will be a fully functional mobile app. The main takeaway from this project is to highlight my rudimentary knowledge of Spring and Authentication. 
 
@@ -30,4 +30,3 @@ This product builds the backend for the Fate/History mobile app. This project fu
 * the system must use Java, Spring, Maven for the back end - for the front end, your choice
 * the system must include some form of authentication
 * the system must include at least 5 tables, at least 1 many to many relationship, at least 1 many to one relationship, and at least 4 front end screens.
-
