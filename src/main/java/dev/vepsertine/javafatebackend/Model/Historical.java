@@ -14,11 +14,9 @@ public class Historical {
 
     private String historicalname, historicalbio, historicalimageURL, historicalsizzler;
 
-    //One to One
+    @OneToOne(mappedBy = "historical")
     private Fate fate;
 
-    //One to Many
-    private Set<MapMarker> mapmarkers = new HashSet<>();
 
     public Historical(){}
 
@@ -70,11 +68,4 @@ public class Historical {
         this.fate = fate;
     }
 
-    public Set<MapMarker> getMapmarkers() {
-        return mapmarkers;
-    }
-
-    public void setMapmarkers(Set<MapMarker> mapmarkers) {
-        this.mapmarkers = mapmarkers;
-    }
 }

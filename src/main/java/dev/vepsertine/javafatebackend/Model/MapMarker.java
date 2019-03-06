@@ -1,5 +1,7 @@
 package dev.vepsertine.javafatebackend.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 
 @Entity
@@ -13,11 +15,10 @@ public class MapMarker {
     private String title, snippet;
     private long latitude, longtitude;
 
-    //Many to One
+    @ManyToOne
+    @JoinColumn(name = "fateid")
+    @JsonIgnoreProperties("mapmarkers")
     private Fate fate;
-
-    //Many to One
-    private Historical historical;
 
     public MapMarker(){}
 
@@ -69,11 +70,4 @@ public class MapMarker {
         this.fate = fate;
     }
 
-    public Historical getHistorical() {
-        return historical;
-    }
-
-    public void setHistorical(Historical historical) {
-        this.historical = historical;
-    }
 }

@@ -1,5 +1,7 @@
 package dev.vepsertine.javafatebackend.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 
 @Entity
@@ -12,11 +14,9 @@ public class Tag {
 
     private String tagname;
 
-    //Many to one
+    @ManyToMany(mappedBy = "tags")
+    @JsonIgnoreProperties("tags")
     private Fate fate;
-
-    //Many to one
-    private Historical historical;
 
     public Tag(){}
 
@@ -44,11 +44,5 @@ public class Tag {
         this.fate = fate;
     }
 
-    public Historical getHistorical() {
-        return historical;
-    }
 
-    public void setHistorical(Historical historical) {
-        this.historical = historical;
-    }
 }
