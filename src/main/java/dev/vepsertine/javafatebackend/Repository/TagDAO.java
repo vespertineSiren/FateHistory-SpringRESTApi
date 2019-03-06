@@ -1,4 +1,7 @@
 package dev.vepsertine.javafatebackend.Repository;
 
-public interface TagDAO {
+import dev.vepsertine.javafatebackend.Model.Tag;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface TagDAO extends JpaRepository<Tag, Long> {
 }

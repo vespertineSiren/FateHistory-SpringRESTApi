@@ -31,15 +31,21 @@ public class Fate {
      @JsonIgnoreProperties("fate")
     private Set<MapMarker> mapmarkers = new HashSet<>();
 
-    public Fate(){}
+     @ManyToMany(mappedBy = "favorites")
+     @JsonIgnoreProperties("favorites")
+     private Set<User> users = new HashSet<>();
 
-    public long getFateid() {
+
+
+     public Fate(){}
+
+     public long getFateid() {
         return fateid;
-    }
+     }
 
-    public void setFateid(long fateid) {
+     public void setFateid(long fateid) {
         this.fateid = fateid;
-    }
+     }
 
     public String getFatename() {
         return fatename;

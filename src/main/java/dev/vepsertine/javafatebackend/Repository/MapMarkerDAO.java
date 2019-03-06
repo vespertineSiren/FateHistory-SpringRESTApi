@@ -1,4 +1,7 @@
 package dev.vepsertine.javafatebackend.Repository;
 
-public interface MapMarkerDAO {
+import dev.vepsertine.javafatebackend.Model.MapMarker;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface MapMarkerDAO extends JpaRepository<MapMarker, Long> {
 }
