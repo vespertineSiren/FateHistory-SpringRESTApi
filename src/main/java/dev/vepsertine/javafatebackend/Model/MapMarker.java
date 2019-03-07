@@ -18,7 +18,7 @@ public class MapMarker {
     @ManyToOne
     @JoinColumn(name = "fateid")
     @JsonIgnoreProperties("mapmarkers")
-    private Fate fate;
+    private Fate fatefavorites;
 
     public MapMarker(){}
 
@@ -62,12 +62,11 @@ public class MapMarker {
         this.longtitude = longtitude;
     }
 
-    public Fate getFate() {
-        return fate;
+    public Fate getFatefavorites() {
+        return fatefavorites;
     }
 
-    public void setFate(Fate fate) {
-        this.fate = fate;
+    public void setFatefavorites(Fate fatefavorites) {
+        this.fatefavorites = fatefavorites;
     }
-
 }

@@ -20,24 +20,46 @@ public class Fate {
     @JoinColumn(name = "historicalfigure", referencedColumnName = "historicalid")
     private Historical historical;
 
+    @OneToMany(mappedBy = "fatefavorites")
+    @JsonIgnoreProperties("fatefavorites")
+    private Set<MapMarker> mapmarkers = new HashSet<>();
+
     @ManyToMany
     @JoinTable(name = "topictags",
         joinColumns = {@JoinColumn(name = "fateid")},
         inverseJoinColumns = {@JoinColumn(name = "tagid")})
-    @JsonIgnoreProperties("tags")
+    @JsonIgnoreProperties("fate")
     private Set<Tag> tags = new HashSet<>();
-
-     @OneToMany(mappedBy = "fate")
-     @JsonIgnoreProperties("fate")
-    private Set<MapMarker> mapmarkers = new HashSet<>();
 
      @ManyToMany(mappedBy = "favorites")
      @JsonIgnoreProperties("favorites")
      private Set<User> users = new HashSet<>();
 
+    public String getFatebio() {
+        return fatebio;
+    }
 
+    public void setFatebio(String fatebio) {
+        this.fatebio = fatebio;
+    }
 
-     public Fate(){}
+    public Set<Tag> getTags() {
+        return tags;
+    }
+
+    public void setTags(Set<Tag> tags) {
+        this.tags = tags;
+    }
+
+    public Set<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(Set<User> users) {
+        this.users = users;
+    }
+
+    public Fate(){}
 
      public long getFateid() {
         return fateid;

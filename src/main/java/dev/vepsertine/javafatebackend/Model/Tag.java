@@ -3,6 +3,7 @@ package dev.vepsertine.javafatebackend.Model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "tag")
@@ -16,7 +17,7 @@ public class Tag {
 
     @ManyToMany(mappedBy = "tags")
     @JsonIgnoreProperties("tags")
-    private Fate fate;
+    private Set<Fate> fate;
 
     public Tag(){}
 
@@ -36,13 +37,11 @@ public class Tag {
         this.tagname = tagname;
     }
 
-    public Fate getFate() {
+    public Set<Fate> getFate() {
         return fate;
     }
 
-    public void setFate(Fate fate) {
+    public void setFate(Set<Fate> fate) {
         this.fate = fate;
     }
-
-
 }

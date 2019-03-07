@@ -25,11 +25,19 @@ public class User {
     @JoinTable(name = "favoritedby",
         joinColumns = {@JoinColumn(name = "id")},
         inverseJoinColumns = {@JoinColumn(name = "fateid")})
-    @JsonIgnoreProperties("favorites")
-    public Set<Fate> favorites = new HashSet<>();
+    @JsonIgnoreProperties("users")
+    private Set<Fate> favorites = new HashSet<>();
 
 
     public User() {
+    }
+
+    public Set<Fate> getFavorites() {
+        return favorites;
+    }
+
+    public void setFavorites(Set<Fate> favorites) {
+        this.favorites = favorites;
     }
 
     public long getId() {
@@ -64,6 +72,7 @@ public class User {
     public void setRole(String role) {
         this.role = role;
     }
+
 
 //    public List<SimpleGrantedAuthority> getAuthority() {
 //        String myRole = "ROLE_" + this.role.toUpperCase();
