@@ -16,8 +16,8 @@ public class Fate {
 
     private String fatename, fatebio, fateimageURL;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "historicalfigure", referencedColumnName = "historicalid")
+    @OneToOne
+    @JoinColumn(name = "historicalid")
     private Historical historical;
 
     @OneToMany(mappedBy = "fatefavorites")
