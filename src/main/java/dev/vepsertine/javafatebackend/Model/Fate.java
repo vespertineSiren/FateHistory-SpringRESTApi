@@ -18,6 +18,7 @@ public class Fate {
 
     @OneToOne
     @JoinColumn(name = "historicalid")
+    @JsonIgnoreProperties("fate")
     private Historical historical;
 
     @OneToMany(mappedBy = "fatefavorites")

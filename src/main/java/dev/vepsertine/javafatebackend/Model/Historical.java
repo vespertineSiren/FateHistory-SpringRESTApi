@@ -1,5 +1,7 @@
 package dev.vepsertine.javafatebackend.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -15,6 +17,8 @@ public class Historical {
     private String historicalname, historicalbio, historicalimageURL, historicalsizzler;
 
     @OneToOne(mappedBy = "historical")
+    @JoinColumn(name = "fateid")
+    @JsonIgnoreProperties("historical")
     private Fate fate;
 
 
