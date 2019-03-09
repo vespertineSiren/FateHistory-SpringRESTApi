@@ -149,18 +149,18 @@ insert into mapmarker (mapmarkerid, title, snippet, latitude , longtitude, fatei
 insert into mapmarker (mapmarkerid, title, snippet, latitude , longtitude, fateid) values (75, 'Karangkeng', 'Integer ac neque. Duis bibendum.', 1.4862816, 34.0375944, 3);
 
 insert into tag (tagid, tagname) values (1, 'Queer');
-insert into tag (tagid, tagname) values (2, 'Comedy|Drama');
-insert into tag (tagid, tagname) values (3, 'Animation|Children|Comedy');
+insert into tag (tagid, tagname) values (2, 'Irony');
+insert into tag (tagid, tagname) values (3, 'Children');
 insert into tag (tagid, tagname) values (4, 'LGBT');
 insert into tag (tagid, tagname) values (5, 'Depressing');
-insert into tag (tagid, tagname) values (6, 'Action|Adventure|Crime|Thriller');
-insert into tag (tagid, tagname) values (7, 'Action|Drama|War');
+insert into tag (tagid, tagname) values (6, 'Crime');
+insert into tag (tagid, tagname) values (7, 'War');
 insert into tag (tagid, tagname) values (8, 'Dairy-Free');
-insert into tag (tagid, tagname) values (9, 'Sci-Fi|IMAX');
-insert into tag (tagid, tagname) values (10, 'Comedy');
-insert into tag (tagid, tagname) values (11, 'Action|Western');
+insert into tag (tagid, tagname) values (9, 'IMAX');
+insert into tag (tagid, tagname) values (10, 'Trans');
+insert into tag (tagid, tagname) values (11, 'Western');
 insert into tag (tagid, tagname) values (12, 'Documentary');
-insert into tag (tagid, tagname) values (13, 'Drama|Romance|Thriller|War');
+insert into tag (tagid, tagname) values (13, 'Romance');
 insert into tag (tagid, tagname) values (14, 'Drama');
 insert into tag (tagid, tagname) values (15, 'Comedy');
 
